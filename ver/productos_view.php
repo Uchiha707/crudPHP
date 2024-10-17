@@ -1,5 +1,6 @@
 <!-- Archivo: Vistas/productoview.php -->
 <!-- Propósito: Vista para mostrar la lista de productos -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,8 @@
 </head>
 <body>
     <h3>CRUD de Productos</h3>
+    <a href="index.php?accion=modalAdd">Agregar Producto ➕📁</a>
+    
     <table class="table" border="1" >
         <thead>
             <tr>
