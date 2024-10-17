@@ -1,11 +1,14 @@
 <?php
 print("<br>Controlador<br>");
 
-require_once './modelos/ProductoModelo.php';
+// Asegúrate de que la ruta sea correcta para incluir el modelo
+require_once '../modelos/ProductoModelo.php';
+
 
 class ProductoControlador {
     private ProductoModelo $modeloProducto;
 
+    // Constructor que inicializa el modelo de producto
     public function __construct() {
         $this->modeloProducto = new ProductoModelo();
     }
@@ -18,7 +21,7 @@ class ProductoControlador {
 
     // Controlador para mostrar el formulario de agregar producto
     public function mostrarFormularioAgregarProducto(): void {
-        include './Vistas/modaladdproducto.php';
+        include './vistas/modaladdproducto.php'; // Asegúrate de que la ruta sea correcta
     }
 
     // Controlador para agregar productos
@@ -40,7 +43,7 @@ class ProductoControlador {
     // Controlador para mostrar el formulario de actualizar producto, con un producto por su ID
     public function mostrarFormularioActualizarProducto(int $id): void {
         $producto = $this->modeloProducto->obtenerProductoPorId($id);
-        include './Vistas/modalactualizarproducto.php';
+        include './vistas/modalactualizarproducto.php'; // Asegúrate de que la ruta sea correcta
     }
 
     // Controlador para actualizar producto por su ID
@@ -72,4 +75,8 @@ class ProductoControlador {
     }
 }
 ?>
+
+
+
+
 

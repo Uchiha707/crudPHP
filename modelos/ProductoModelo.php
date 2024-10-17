@@ -1,11 +1,13 @@
 <?php
+// Mensaje para verificar que el modelo se carga
 print("Modelo");
 
 class ProductoModelo {
     private PDO $conexion;
 
+    // Constructor que establece la conexión a la base de datos
     public function __construct() {
-        global $conexion;
+        global $conexion; // Asegúrate de que $conexion esté definida en otro archivo
         $this->conexion = $conexion;
     }
 
@@ -53,3 +55,4 @@ class ProductoModelo {
     }
 }
 ?>
+
